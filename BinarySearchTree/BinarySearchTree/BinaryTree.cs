@@ -53,44 +53,37 @@ namespace BinarySearchTree
         }
 
 
-        public int Find(int data)
+        public bool Find(int data)
         {
-            if (data < root.data)
+            if (data == root.data)
             {
-                while (true)
+                return true;
+            }
+            Node currentroot = root;
+            while (currentroot.data != data)
+            {
+                if (data < currentroot.data && currentroot.LeftChild != null)
                 {
-                    if (data == root.LeftChild.data)
-                    {
-                        return data;
-                    }
-                    else if (data < root.LeftChild.data)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
+                    currentroot = currentroot.LeftChild;
                 }
+                else if (data > currentroot.data && currentroot.RightChild != null)
+                {
+                    currentroot = currentroot.RightChild;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            if (currentroot.data == data)
+            {
+                return true;
             }
             else
             {
-                while (true)
-                {
-                    if (data == root.RightChild.data)
-                    {
-                        return data;
-                    }
-                    else if (data < root.RightChild.data)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                }
+                return false;
             }
         }
+        
     }
 }

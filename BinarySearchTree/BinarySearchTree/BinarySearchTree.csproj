@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Desktop\Devcodecamp\week_06\Projects\BinaryTree.cs">
-      <Link>BinaryTree.cs</Link>
-    </Compile>
+    <Compile Include="BinaryTree.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
